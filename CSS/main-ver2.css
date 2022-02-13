@@ -1,0 +1,504 @@
+@font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ 
+html, body {width: 100%; height: 100%;}
+html{
+    font-size: 16px;
+    font-family: 'InfinitySans-RegularA1';
+    /* scroll-behavior:smooth; */
+}
+body{
+    margin: 0;
+}
+::-webkit-scrollbar {
+    /* width: 10px; */
+    width: 0;
+}
+/*    
+::-webkit-scrollbar-track {
+    background: #eeeeee;
+    border-radius: 5px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: rgb(153, 153, 153);
+    border-radius: 5px;
+} */
+header{
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-right: 1px solid #ccc;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    
+}
+header #headerLogo{
+    width: 100%;
+    text-align: center;
+}
+header #headerLogo a{
+    font-size: 3rem;
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+    display: inline-block;
+    animation: text-gradient 15s ease infinite;
+    cursor: pointer;
+}
+
+header nav .btn_menu{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.btn_menu a{
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+    display: inline-block;
+    cursor: pointer;
+}
+.btn_menu a:hover, #headerLogo:hover{
+    animation-duration: 0.7s;
+    animation-name: jump;
+    animation-iteration-count: infinite;
+}
+@keyframes jump{
+    0%{
+        transform: translateY(4px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(4px);
+    }
+}
+.main-txt .myname{
+    font-size: 3.5rem;
+}
+@keyframes text-gradient {
+	0% {
+		color: #ee7752;
+	}
+    16.6%{
+        color: #e73c7e;
+    }
+    33.5%{
+        color: #23a6d5;
+    }
+	50% {
+        color: #23d5ab;
+	}
+    66.6%{
+        color: #23a6d5;
+    }
+    83.2%{
+        color: #e73c7e;
+    }
+	100% {
+        color: #ee7752;
+	}
+}
+main, #profile, #skill, #project, #contact{
+    width: 80%;
+    margin-left: 20%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+main{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: back-gradient 15s ease infinite;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+@keyframes back-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#mainImg, .main-txt, #about-me, header{
+    animation: fadein 1s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+main #mainImg{
+    width: 15%;
+    margin-right:5%;
+}
+main #mainImg img{
+    width: 100%;
+    border-radius: 20px;
+}
+.main-txt{
+    width: 45%;
+    color: rgb(245, 245, 245);
+    font-size: 3rem;
+}
+main #about-me{
+    margin-top: 80px;
+    width: 70%;
+    line-height: 3rem;
+
+    border-top: 5px solid lightsalmon;
+}
+main #about-me p{
+    margin-top: 50px;
+    font-size: 1.5rem;
+    color: rgb(245, 245, 245);
+}
+
+#profile div{
+    color: rgb(30, 30, 30);
+    text-align: center;   
+}
+
+.bx-wrapper{
+    border: 0;
+    margin-bottom: 0;
+}
+.bx-wrapper .bx-pager {
+    padding-top: 0;
+    bottom: 30px;
+}
+.maintitle{
+    font-family: 'twayair';
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+.subtitle{
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 3rem;
+}
+.slider .slider-list ul li{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    text-align: left;
+    list-style-type: none;
+}
+.slider .slider-list ul li del{
+    font-size: 0.8rem;
+}
+/* 이력서 */
+#profile{
+    background-color: #7e6e62;
+    border: 0;
+}
+#profile > * {
+    box-shadow: none;
+}
+.myInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.myInfo .boxProfileLeft{
+    width: 25%;
+    height: 100vh;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #7e6e62;
+}
+.boxProfileTitle{
+    width: 100%;
+    margin-bottom: 10%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.myInfo .boxProfileLeft #boxProfileImg{
+    width: 40%;
+    height: 20%;
+    background-image: url(../images/profile1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.boxProfileRight{
+    width: 80%;
+    height: 100vh;
+    background-color: #7e6e62;
+    display: flex;
+    align-items: center;
+}
+.boxProfileRight > div{
+    width: 92%;
+    height: 85vh;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+
+}
+.box_content_right{
+    width: 39.5%;
+    height: 90%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.box_content_right_txt > div{
+    margin-bottom: 2rem;
+}
+.box_content_right:last-child > .box_content_right_txt > div{
+    margin-bottom: 3.5rem;
+}
+.box_content_right_txt > div > *{
+    line-height: 1.7rem;
+    text-align: left;
+}
+/* #profile .slider div{
+    width: 100%;
+    height: 100vh;
+    
+} */
+#episode1{
+    background-image: url(../images/schooldays.jfif);
+}
+#episode2{
+    background-image: url(../images/uv.JPG);
+}
+.episode{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.episode-content{
+    width: 80%;
+    padding: 5% 2%;
+    box-sizing: border-box;
+    /* border: 1px solid ; */
+    border-radius: 10px;
+    background-color: rgb(255, 254, 199);
+}
+
+
+/* skill */
+#skill{
+    display: flex;
+    flex-direction: column;
+    background-color: #ee7752;
+    color: rgb(30, 30, 30);
+}
+.title{
+    width: 95%;
+    height: 15%;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 5%;
+
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+.box_title_skills{
+    width: 100%;
+    height: 10%;
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box_contain_skills{
+    width: 100%;
+    height: 85%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box_content_skills{
+    width: 20%;
+    height: 85%;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  7px 7px 14px #9d4f36,
+             -7px -7px 14px #ff9f6e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.img_skills{
+    width: 60%;
+    height: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+/* project */
+.box_project{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box_project iframe{
+    width: 40%;
+    height: 50%;
+}
+.box_project .box_project_Info{
+    width: 40%;
+    height: 80%;
+    padding: 10% 5%;
+}
+.img_project{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 90%;
+}
+.box_project_Info > div{
+    margin-top: 6rem;
+    font-size: 1.1rem;
+}
+.box_project_Info h1{
+    font-size: 1.6rem;
+}
+
+
+
+
+
+
+.img_project:hover{cursor: pointer;}
+#img_project_moms{
+    background-image: url("../images/momsholic.png");
+}
+#img_project_Ssangyong{
+    background-image: url("../images/Ssangyong.png");
+}
+#img_project_dgdg{
+    background-image: url("../images/dgdg.jfif");
+}
+
+
+#contact{
+    color: rgb(30, 30, 30);
+    padding: 5% 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#contact ul li{
+    font-size: 2rem;
+    list-style: none;
+    margin-bottom: 5rem;
+}
+
+
+
+#img_skills_HTML{
+    background-image: url("../images/html5.png");
+}
+#img_skills_CSS{
+    background-image: url("../images/css3.png");
+}
+#img_skills_JavaScript{
+    background-image: url("../images/js.png");
+}
+
+#img_skills_Java{
+    background-image: url("../images/java.png");
+}
+#img_skills_JSP{
+    background-image: url("../images/jsp.png");
+}
+#img_skills_Spring{
+    background-image: url("../images/spring.png");
+}
+
+#img_skills_MySql{
+    background-image: url("../images/mysql.png");
+}
+#img_skills_Oracle{
+    background-image: url("../images/oracle.png");
+}
+#img_skills_MyBatis{
+    background-image: url("../images/mybatis.png");
+}
+
+#img_skills_Axure{
+    background-image: url("../images/Axure.png");
+}
+#img_skills_git{
+    background-image: url("../images/GitHub.png");
+}
+#img_skills_word{
+    background-image: url("../images/word.png");
+}
+#img_skills_powerpoint{
+    background-image: url("../images/powerpoint.png");
+}
+#img_skills_excel{
+    background-image: url("../images/excel.png");
+}
+
+
+
+
+
+
+
+
+
+
+    
